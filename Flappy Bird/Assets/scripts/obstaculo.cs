@@ -7,6 +7,14 @@ public class obstaculo : MonoBehaviour
     [SerializeField]
     private float velocidade = 2f;
 
+    [SerializeField]
+    private float variacaoPosicaoY;
+
+    private void Awake()
+    {
+        this.transform.Translate(Vector3.up * Random.Range(-variacaoPosicaoY, variacaoPosicaoY));
+    }
+
     // Update is called once per frame
     void Update()
     {
